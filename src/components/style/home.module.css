@@ -1,0 +1,303 @@
+.ctnButtons{
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.mtb{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.gridHalf{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:40px;
+}
+.gridTxt h2{
+    color:var(--orange);
+}
+.imgPresentation img{
+    width:100%;
+    max-width:100%;
+}
+.gridTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.greyBckg{
+    background: var(--lightGrey);
+}
+.seoCtn{
+    padding:40px;
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.1);
+}
+.seoCtn h2{
+    color:var(--green);
+    margin-bottom:35px;
+}
+.txtRight{
+    text-align: right;
+}
+.ctnBenefits{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:25px;
+}
+.ctnBenefit{
+    background: var(--lightBlue);
+    border-radius:10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+.ctnBenefit p{
+    margin-top:20px;
+    margin-bottom:0;
+}
+.ctnBenefit img{
+    max-width:68px;
+}
+.newAbsolute{
+    color:var(--red);
+    text-transform: uppercase;
+    font-size:12px;
+    position: absolute;
+    right:15px;
+    top:15px;
+}
+.ctnFrame{
+    width:100%;
+    height: 400px;
+    background: url('../../../public/images/wideFrame.png');
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.imgTeam{
+    max-width:100%;
+    overflow: hidden;
+    border-radius:50%;
+}
+.ctnTeam{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:2%;
+    justify-content: center;
+    margin-top: 40px;
+}
+.ctnMember{
+    flex-basis: 23%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom:30px;
+}
+.ctnMember:nth-child(4){
+    margin-right:0;
+}
+.memberName{
+    color:var(--blue);
+    font-size:24px;
+    line-height:33px;
+    margin-top:15px;
+}
+.memberTag{
+    color:var(--black);
+    font-size:20px;
+    line-height:28px;
+    margin:10px 0px;
+}
+.memberDescription{
+    color:var(--black);
+    font-size:16px;
+    line-height:22px;
+}
+.ctnMotto{
+    background: var(--lightGreen);
+    padding:125px;
+    position: relative;
+    width:48%;
+    margin:auto;
+    border-top-right-radius:50px;
+    border-bottom-left-radius:50px;
+    margin-top:50px;
+}
+.content{
+    height:190px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.authorMotto{
+    color:var(--blue);
+    font-size:16px;
+}
+.quota{
+    width: 90px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+}
+.quotaTop{
+    background-image: url('../../../public/images/quotaLeft.png');
+    top: -10px;
+    left: -20px;
+}
+.quotaBottom{
+    background-image: url('../../../public/images/quotaRight.png');
+    bottom: -17px;
+    right: -22px;
+}
+.ctnFaq{
+    padding:40px 0px;
+}
+.ctnForm{
+    width:48%;
+    margin:auto;
+    padding:30px;
+    border:1px solid var(--blue);
+    box-sizing: border-box;
+}
+.ctnForm h2{
+    color:var(--rawGreen);
+}
+.ctnForm textarea{
+    height:110px !important;
+    resize: none;
+}
+.ctnButton{
+    text-align: right;
+}
+.ctnDownload{
+    margin-top:30px;
+}
+ 
+.content {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+.fadeOut {
+    opacity: 0;
+  }
+.monkeyCtn img{
+    max-width:100%;
+}
+
+/* Responsive */
+@media only screen and (max-width : 1000px){
+    .ctnBenefits{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .ctnMotto{
+        width:96%;
+        box-sizing: border-box;
+    }
+}
+@media only screen and (max-width : 950px){
+    .ctnFrame{
+        background: url('../../../public/images/wideFrameMobile.png');
+    }
+    .ctnForm{
+        width: 65%;
+    }
+}
+@media only screen and (max-width : 800px){
+    .gridHalf{
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+    }
+    .gridReverse .txtRight{
+        text-align: left;
+    }
+    .gridReverse .gridText{
+        grid-area:txt;
+    }
+    .gridReverse .imgPresentation{
+        grid-area:image;
+    }
+    .gridReverse{
+        grid-template-areas: "image" "txt";
+    }
+    .mtb{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width : 750px){
+    .ctnMotto{
+        width:100%;
+    }
+    .quotaTop{
+        top: 10px;
+        left: 10px;
+    }
+    .quotaBottom{
+        bottom: 3px;
+        right: 3px;
+    }
+    .authorMotto{
+        margin-top:10px;
+    }
+}
+@media only screen and (max-width : 700px){
+    .ctnBenefits{
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
+    }
+    .ctnFrame{
+        height:350px;
+        background-attachment: scroll !important;
+    }
+    .ctnMotto{
+        padding: 95px 90px;
+    }
+    .ctnForm{
+        width:100%;
+    }
+    .monkeyCtn{
+        text-align: center;
+    }
+    .memberName{
+        font-size:22px;
+        line-height:24px;
+    }
+    .memberTag{
+        font-size:18px;
+        line-height:22px;
+    }
+}
+@media only screen and (max-width : 600px){
+    .ctnMotto{
+        padding: 95px 25px;
+    }
+}
+@media only screen and (max-width : 500px){
+    .quota{
+        width: 60px;
+        height: 54px;
+        background-size: 100%;
+    }
+    .quotaBottom{
+        bottom: 10px;
+        right: 12px;
+    }
+    .content{
+        height: 200px;
+        overflow-y: auto;
+        display: block;
+    }
+    .seoCtn{
+        padding: 20px;
+    }
+}

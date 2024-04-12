@@ -1,0 +1,72 @@
+.ctnGrid{
+    display: grid;
+    grid-template-columns: 138px 1fr;
+    grid-gap:20px;
+}
+.logoH{
+    display: flex;
+    align-items: center;
+}
+.logoH img{
+    width:100%;
+    transition: all 0.5s ease;
+}
+.menuLink{
+    text-decoration: none;
+    color:var(--black);
+    font-size:18px;
+    font-weight:400;
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+.menuLinks{
+    display: flex;
+    flex-direction:row;
+    gap:20px;
+}
+.menuHeader{
+   display: flex;
+   align-items: center; 
+   justify-content: flex-end;
+}
+.menuLinks li{
+    display: flex;
+    align-items: center;
+}
+.menuRight{
+    display: none;
+}
+/* Responsive */
+@media only screen and (max-width : 700px){
+    .hideForMobile{
+        display: none;
+    }
+    .openedMenu{
+        display: block;
+    }
+    .menuRight{
+        display: block;
+        text-align: right;
+    }
+    .openedMenu .menuLinks{
+        display: block;
+    }
+    .openedMenu .menuLinks li{
+        justify-content: flex-end;
+    }
+    .openedMenu .menuLinks li a{
+        padding:8px 0px;
+    }
+    .openedGrid .logoH{
+        grid-area:logo;
+    }
+    .openedGrid .menuRight{
+        grid-area:bars;
+    }
+    .openedGrid .openedMenu{
+        grid-area:links;
+    }
+    .openedGrid{
+        grid-template-areas: "logo bars" "links links";
+    }
+  }
