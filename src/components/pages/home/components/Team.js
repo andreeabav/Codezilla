@@ -44,7 +44,7 @@ function Team() {
             });
         }else{
             if($('.sliderForMobile').hasClass('slick-initialized')) {
-                $('.sliderForMobile').unslick("unslick");
+                $('.sliderForMobile').slick("unslick");
             }
         }
     
